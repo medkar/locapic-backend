@@ -3,6 +3,10 @@ var router = express.Router();
 
 const Place = require('../models/places');
 
+router.get('/test', (req, res)=>{
+    res.json({result:true})
+})
+
 router.post('/places', (req, res) => {
     const newPlace = new Place({
         nickname: req.body.nickname,
